@@ -1,0 +1,7 @@
+name: FancyPlugins
+version: '0.0.1'
+main: org.mcsmp.de.fancyPlugins.FancyPlugins
+api-version: '1.21'
+authors: [tooobii, tizooo]
+description: A MinecraftSMP.de Plugin framework
+website: web.minecraftsmp.de

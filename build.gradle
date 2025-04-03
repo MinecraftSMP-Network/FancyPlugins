@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'org.mcsmp.de'
+group = 'org.minecraftsmp.de'
 version = '0.0.1'
 
 repositories {
@@ -31,6 +31,9 @@ dependencies {
 
 def targetJavaVersion = 21
 java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(targetJavaVersion)
+    }
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     sourceCompatibility = javaVersion
     targetCompatibility = javaVersion

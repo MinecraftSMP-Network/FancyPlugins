@@ -1,28 +1,32 @@
-allprojects {
-    version = "0.0.2"
-    group = 'org.minecraftsmp.de'
+plugins {
+    id 'java'
+    id 'maven-publish'
 }
 
-subprojects {
-    apply plugin: 'java'
-    apply plugin: 'maven-publish'
+allprojects {
+    group = 'org.minecraftsmp.de'
+    version = '0.0.1'
+}
 
-    sourceCompatibility = 1.8 // java 8
-    targetCompatibility = 1.8
-
-    java {
-        withSourcesJar()
-        withJavadocJar()
+repositories {
+    mavenCentral()
+    maven {
+        name = "papermc-repo"
+        url = "https://repo.papermc.io/repository/maven-public/"
     }
-
-    publishing {
-        publications {
-            maven(MavenPublication) {
-                groupId project.group
-                artifactId project.name
-                version project.version
-                from components.java
-            }
-        }
+    maven {
+        name = "sonatype"
+        url = "https://oss.sonatype.org/content/groups/public/"
     }
+    maven {
+        name = "jitpack.io"
+        url = "https://jitpack.io"
+    }
+}
+
+dependencies {
+    compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT")
+    compileOnly("org.projectlombok:lombok:1.18.38")
+
+    annotationProcessor("org.projectlombok:lombok:1.18.38")
 }

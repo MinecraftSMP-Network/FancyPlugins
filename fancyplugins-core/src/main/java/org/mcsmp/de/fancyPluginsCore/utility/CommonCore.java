@@ -683,8 +683,8 @@ public abstract class CommonCore {
 		else if (object instanceof Enum)
 			return ((Enum<?>) object).toString().toLowerCase();
 
-		else if (object instanceof MinecraftPlayer minecraftPlayer)
-			return minecraftPlayer.getName();
+		else if (object instanceof MinecraftPlayer)
+			return ((MinecraftPlayer) object).getName();
 
 		else if (object instanceof ConfigStringSerializable)
 			return ((ConfigStringSerializable) object).serialize();

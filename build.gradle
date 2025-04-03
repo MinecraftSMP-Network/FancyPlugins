@@ -1,14 +1,14 @@
 allprojects {
     version = "1.4"
-    group = 'io.jitpack.gradle-modular'
+    group = 'com.github.MinecraftSMP-Network'
 }
 
 subprojects {
     apply plugin: 'java'
     apply plugin: 'maven-publish'
 
-    sourceCompatibility = 1.8 // java 8
-    targetCompatibility = 1.8
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 
     java {
         withSourcesJar()

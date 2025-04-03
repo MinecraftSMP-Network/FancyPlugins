@@ -1,2 +1,2 @@
 rootProject.name = 'FancyPlugins'
-include 'fancyplugins-core', 'fancyplugins-bukkit'
+include 'fancyplugins-core'

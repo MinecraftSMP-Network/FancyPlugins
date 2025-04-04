@@ -15,10 +15,6 @@ repositories {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
     }
-    maven {
-        name = "jitpack.io"
-        url = "https://jitpack.io"
-    }
 }
 
 dependencies {

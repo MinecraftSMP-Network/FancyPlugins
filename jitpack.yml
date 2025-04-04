@@ -1,5 +1,4 @@
 jdk:
-  - openjdk17
+  - openjdk23
 before_install:
-  - sdk install java 21
-  - sdk use java 21
+  - sdk install maven

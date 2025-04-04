@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
 group = 'org.minecraftsmp'
@@ -28,4 +29,16 @@ dependencies {
     implementation("org.snakeyaml:snakeyaml-engine:2.9")
 
     annotationProcessor("org.projectlombok:lombok:1.18.38")
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'org.gradle.sample'
+            artifactId = 'library'
+            version = '1.1'
+
+            from components.java
+        }
+    }
 }
